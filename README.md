@@ -134,10 +134,10 @@ sao placeholder do boilerplate]
 [DEFINIR EM GRUPO - papeis ainda nao atribuidos entre Eduardo, Arthur,
 Iraquitan e David]
 
-- Dev / telas: a definir
-- Dev / dados (Room): a definir
-- Design e identidade visual: a definir
-- Documentacao, build e entrega: a definir
+- Dev / telas: Davjd
+- Dev / dados (Room): Eduardo 
+- Design e identidade visual: Iraquitan 
+- Documentacao, build e entrega: Arthur 
 
 Lembrete do canvas: todos programam - o papel define quem responde por
 aquela parte, nao quem trabalha sozinho nela.
