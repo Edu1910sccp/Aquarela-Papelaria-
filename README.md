@@ -134,7 +134,7 @@ sao placeholder do boilerplate]
 [DEFINIR EM GRUPO - papeis ainda nao atribuidos entre Eduardo, Arthur,
 Iraquitan e David]
 
-- Dev / telas: Davjd
+- Dev / telas: David
 - Dev / dados (Room): Eduardo 
 - Design e identidade visual: Iraquitan 
 - Documentacao, build e entrega: Arthur 
@@ -142,8 +142,8 @@ Iraquitan e David]
 Lembrete do canvas: todos programam - o papel define quem responde por
 aquela parte, nao quem trabalha sozinho nela.
 
-Riscos [DEFINIR EM GRUPO, tabela vazia no canvas]:
-- Risco: a definir | Plano B: a definir
+Riscos:
+- Risco: alguns membros do grupo não possuem computador em casa| Plano B: arrumar alguns dias pra alugar algum laboratório e fazer.
 
 
 10. ACORDO DE TRABALHO COM IA
