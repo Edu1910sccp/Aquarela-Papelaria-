@@ -20,8 +20,7 @@ botom) ou precisa imprimir algo (um trabalho escolar, uma planilha) tem
 que ir ate a loja fisica, explicar o pedido pessoalmente e esperar sem
 nenhum controle simples do que ja foi pedido.
 
-Situacao concreta [DEFINIR EM GRUPO - validar/ajustar com exemplo real,
-ex. de conversa com o Claudio]: um estudante decide na vespera que
+Situacao concreta: um estudante decide na vespera que
 precisa de um material personalizado para um trabalho e nao tem como
 registrar o pedido, acompanhar o status ou saber o que ja pediu antes
 sem ir a loja de novo.
@@ -38,7 +37,7 @@ Perfil principal:
 - Trabalhadores/professores que precisam imprimir planilhas ou
   documentos
 
-Quando/onde usam [DEFINIR EM GRUPO]: a preencher - ex. "sempre que
+Quando/onde usam :- ex. "sempre que
 surge a necessidade de um produto novo, geralmente de casa ou da
 escola, antes de ir a loja retirar".
 
@@ -48,8 +47,6 @@ tio de um dos membros do grupo).
 
 4. SOLUCAO EM UMA TELA
 ------------------------
-[DEFINIR EM GRUPO - a descricao abaixo e uma proposta inicial, precisa
-ser validada]
 
 - A tela principal lista: os pedidos ja feitos (produto, cliente,
   status)
@@ -61,8 +58,6 @@ ser validada]
 
 5. FUNCIONALIDADES DO MVP
 ----------------------------
-[DEFINIR EM GRUPO - nomes de funcionalidade e responsavel a confirmar;
-proposta inicial abaixo]
 
 F1 - Cadastrar/listar produtos (caneca, botom, impressao)
      Essencial: Sim | Responsavel: a definir
@@ -79,7 +74,6 @@ F4 - Buscar/filtrar pedidos por cliente ou status
 
 6. FORA DO ESCOPO
 --------------------
-[DEFINIR EM GRUPO - proposta inicial, seguindo as sugestoes do canvas]
 
 - Login/cadastro de usuario com senha
 - Pagamento dentro do app
@@ -118,9 +112,6 @@ Onde entra o try/catch:
 
 8. IDENTIDADE VISUAL
 -----------------------
-[DEFINIR EM GRUPO - cor e icone ainda nao escolhidos; valores abaixo
-sao placeholder do boilerplate]
-
 - Nome exibido (strings.xml): Aquarela Papelaria
 - Cor principal (hex): #6650A4 (placeholder - trocar pela cor definida
   pelo grupo)
@@ -131,8 +122,6 @@ sao placeholder do boilerplate]
 
 9. EQUIPE, PAPEIS E RISCOS
 ------------------------------
-[DEFINIR EM GRUPO - papeis ainda nao atribuidos entre Eduardo, Arthur,
-Iraquitan e David]
 
 - Dev / telas: David
 - Dev / dados (Room): Eduardo 
