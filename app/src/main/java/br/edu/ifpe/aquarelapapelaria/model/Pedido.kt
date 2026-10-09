@@ -24,6 +24,7 @@ data class Pedido(
     val clienteId: Long,                        // quem pediu (Cliente.id)
     val servico: String,                        // ex.: "Cópia colorida A4"
     val quantidade: Int = 1,
+    val prazo: Long, // Prazo de entrega em milissegundos.
     val valor: Long = 0,                        // em centavos
     val status: String = StatusPedido.ORCAMENTO,
     val materialId: Long? = null,               // material a descontar (Material.id); sem FK por enquanto
