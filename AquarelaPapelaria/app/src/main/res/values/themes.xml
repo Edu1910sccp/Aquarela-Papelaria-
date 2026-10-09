@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fronteira: tema XML base da janela (o visual real é feito no Compose, em ui/theme). -->
+<resources>
+    <style name="Theme.AquarelaPapelaria" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
