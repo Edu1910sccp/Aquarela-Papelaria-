@@ -190,3 +190,12 @@ verdadeiras:
 [ ] O docs/USO_DE_IA.md e o AGENTS.md estao preenchidos.
 [ ] Cada integrante consegue abrir o projeto e fazer uma mudanca pequena sozinho.
 [ ] Todo arquivo tem o comentario de fronteira escrito pelo grupo.
+
+
+
+## Protótipo Figma
+
+O protótipo apresenta as telas e a navegação
+do aplicativo Aquarela Papelaria.
+
+[Visualizar protótipo no Figma](https://www.figma.com/design/aGKY9fQi4fqQMsaLlFerOS/Aquarela?node-id=0-1&t=5QbIWXBvJo3ShDJx-1)
