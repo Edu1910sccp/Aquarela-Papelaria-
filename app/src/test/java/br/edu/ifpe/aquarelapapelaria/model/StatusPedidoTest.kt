@@ -9,6 +9,7 @@ import org.junit.Test
 
 class StatusPedidoTest {
 
+    // Verifica se um pedido em orcamento avanca para producao.
     @Test
     fun orcamentoParaProducao() {
         assertEquals(
@@ -17,6 +18,7 @@ class StatusPedidoTest {
         )
     }
 
+    // Verifica se um pedido em producao avanca para pronto.
     @Test
     fun producaoParaPronto() {
         assertEquals(
@@ -25,6 +27,7 @@ class StatusPedidoTest {
         )
     }
 
+    // Verifica se um pedido pronto avanca para entregue e pago.
     @Test
     fun prontoParaEntregue() {
         assertEquals(
@@ -33,6 +36,7 @@ class StatusPedidoTest {
         )
     }
 
+    // Verifica se um pedido entregue permanece no status final.
     @Test
     fun entreguePermaneceEntregue() {
         assertEquals(
@@ -41,3 +45,4 @@ class StatusPedidoTest {
         )
     }
 }
+
