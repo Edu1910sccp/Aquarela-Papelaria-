@@ -199,3 +199,17 @@ O protótipo apresenta as telas e a navegação
 do aplicativo Aquarela Papelaria.
 
 [Visualizar protótipo no Figma](https://www.figma.com/design/aGKY9fQi4fqQMsaLlFerOS/Aquarela?node-id=0-1&t=5QbIWXBvJo3ShDJx-1)
+
+### Telas do protótipo
+
+#### Pedidos
+![Tela de pedidos](docs/telas/01-pedidos.png)
+
+#### Novo Pedido
+![Tela de novo pedido](docs/telas/02-novo-pedido.png)
+
+#### Estoque
+![Tela de estoque](docs/telas/03-estoque.png)
+
+#### Novo Material
+![Tela de novo material](docs/telas/04-novo-material.png)
