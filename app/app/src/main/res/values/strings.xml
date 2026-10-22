@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fronteira: todos os textos visíveis do app (RNF05). -->
+<resources>
+    <string name="app_name">Aquarela Papelaria</string>
+    <string name="placeholder_pedidos">Aquarela Papelaria</string>
+</resources>
