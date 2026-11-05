@@ -1,6 +1,14 @@
 
 package br.edu.ifpe.aquarelapapelaria.viewmodel
 
+import br.edu.ifpe.aquarelapapelaria.R
+import br.edu.ifpe.aquarelapapelaria.ui.UiState
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collect
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,10 +24,60 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
+
+
+
 class PedidosViewModel(application: Application) :
     AndroidViewModel(application) {
 
     private val banco = AppDatabase.obterBanco(application)
+
+    // Fronteira: controla os quatro estados da tela.
+    // Separa a consulta dos dados da interface.
+    // Sem ele, a tela não distingue carregamento e erro.
+
+    private val _uiState =
+        MutableStateFlow<UiState>(UiState.Carregando)
+
+    val uiState: StateFlow<UiState> =
+        _uiState.asStateFlow()
+
+    private var leituraJob: Job? = null
+    init {
+        carregar()
+    }
+
+    fun carregar() {
+        leituraJob?.cancel()
+
+        leituraJob = viewModelScope.launch {
+            _uiState.value = UiState.Carregando
+
+            try {
+
+                banco.pedidoDao()
+                    .listarPorPrazo()
+                    .collect { lista ->
+
+                        _uiState.value =
+                            if (lista.isEmpty()) {
+                                UiState.Vazio
+                            } else {
+                                UiState.Sucesso(lista)
+                            }
+                    }
+
+            } catch (e: CancellationException) {
+                throw e
+
+            } catch (e: Exception) {
+                _uiState.value = UiState.Erro(
+                    R.string.erro_carregar_pedidos
+                )
+            }
+        }
+    }
+
 
     val pedidos = banco.pedidoDao().listarPorPrazo()
         .stateIn(
@@ -44,7 +102,8 @@ class PedidosViewModel(application: Application) :
             quantidade == null || quantidade <= 0 ||
             dias == null || dias !in 1..365
         ) {
-            mensagem = "Preencha os campos corretamente."
+            mensagem = getApplication<Application>()
+                .getString(R.string.campos_invalidos)
             return
         }
 
@@ -75,10 +134,12 @@ class PedidosViewModel(application: Application) :
                     banco.pedidoDao().inserir(pedido)
                 }
 
-                mensagem = "Pedido cadastrado!"
+                mensagem = getApplication<Application>()
+                    .getString(R.string.pedido_cadastrado)
 
             } catch (e: Exception) {
-                mensagem = "Erro ao cadastrar pedido."
+                mensagem = getApplication<Application>()
+                    .getString(R.string.erro_cadastrar_pedido)
             }
         }
     }

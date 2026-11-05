@@ -3,4 +3,56 @@
 <resources>
     <string name="app_name">Aquarela Papelaria</string>
     <string name="placeholder_pedidos">Aquarela Papelaria</string>
+
+    <!-- Fronteira: mensagens da tela de pedidos.
+         Centraliza os textos exibidos ao usuário.
+         Sem elas, a interface perde suas mensagens. -->
+
+    <string name="pedidos_vazios">
+        Nenhum pedido cadastrado.
+    </string>
+
+    <string name="erro_carregar_pedidos">
+        Não foi possível carregar os pedidos.
+    </string>
+
+    <string name="tentar_novamente">
+        Tentar novamente
+    </string>
+
+    <string name="pedido_resumo">
+        %1$s - Quantidade: %2$d
+    </string>
+
+    <string name="campos_invalidos">
+        Preencha os campos corretamente.
+    </string>
+
+    <string name="pedido_cadastrado">
+        Pedido cadastrado!
+    </string>
+
+    <string name="erro_cadastrar_pedido">
+        Erro ao cadastrar pedido.
+    </string>
+
+    <!-- Fronteira: textos da tela de pedidos.
+         Centraliza as mensagens da interface.
+         Sem eles, a tela perde suas mensagens. -->
+
+    <string name="pedidos_cadastrar_titulo">Cadastrar Pedido</string>
+    <string name="pedidos_nome_cliente">Nome do cliente</string>
+    <string name="pedidos_servico_campo">Serviço</string>
+    <string name="pedidos_quantidade_campo">Quantidade</string>
+    <string name="pedidos_prazo_dias">Prazo em dias</string>
+    <string name="pedidos_lista_titulo">Pedidos cadastrados</string>
+    <string name="pedidos_carregando">Carregando pedidos...</string>
+
+    <string name="pedidos_numero">Pedido %1$d</string>
+    <string name="pedidos_cliente_id">Cliente ID: %1$d</string>
+    <string name="pedidos_servico_linha">Serviço: %1$s</string>
+    <string name="pedidos_quantidade_linha">Quantidade: %1$d</string>
+    <string name="pedidos_prazo_linha">Prazo: %1$s</string>
+    <string name="pedidos_status_linha">Status: %1$s</string>
+
 </resources>
