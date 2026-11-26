@@ -1,215 +1,120 @@
-Integrantes: Eduardo, Arthur, Iraquitan e David
-Turma: 3o ano A - Ensino Medio
-Repositorio: https://github.com/Edu1910sccp/Projeto-H-lio-
-Entrega final: 10/12/2026
+# 🎨 Aquarela Papelaria
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" alt="Compose" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="Room" />
+</p>
 
-1. VISAO GERAL
----------------
-Nome do app: Aquarela Papelaria
+---
 
-Pitch: A Aquarela ajuda as pessoas a transformarem ideias ou conceitos
-em produtos fisicos impressos, sem precisar ir presencialmente ate a
-grafica para cada pedido.
+## 📖 Visão Geral
+A **Aquarela** ajuda as pessoas a transformarem ideias ou conceitos em produtos físicos impressos (canecas, botons, apostilas), eliminando a necessidade de deslocamento presencial para cada etapa do pedido.
 
+> **Pitch:** Facilidade e controle na palma da mão para quem busca personalização e agilidade gráfica.
 
-2. PROBLEMA
-------------
-Hoje, sem o app: quem quer um produto personalizado (uma caneca, um
-botom) ou precisa imprimir algo (um trabalho escolar, uma planilha) tem
-que ir ate a loja fisica, explicar o pedido pessoalmente e esperar sem
-nenhum controle simples do que ja foi pedido.
+---
 
-Situacao concreta: um estudante decide na vespera que
-precisa de um material personalizado para um trabalho e nao tem como
-registrar o pedido, acompanhar o status ou saber o que ja pediu antes
-sem ir a loja de novo.
+## 🔍 O Problema e a Solução
 
-Como e resolvido hoje: indo presencialmente ate a grafica.
+**O Problema:** Atualmente, quem deseja um produto personalizado precisa ir até a loja física para explicar o pedido e não possui um canal simples para acompanhar o status da produção ou seu histórico.
 
+**A Solução:** Um aplicativo centralizado onde o usuário registra o pedido de casa, escolhe o produto e acompanha se ele está "Em aberto", "Pronto" ou "Entregue".
 
-3. PUBLICO-ALVO
------------------
-Perfil principal:
-- Pessoas comuns que querem um produto personalizado (caneca, botom)
-- Estudantes que precisam imprimir trabalhos escolares ou comprar
-  materiais escolares
-- Trabalhadores/professores que precisam imprimir planilhas ou
-  documentos
+**Público-Alvo:** 
+*   🎓 **Estudantes:** Impressão de trabalhos e materiais escolares.
+*   ☕ **Presentes:** Pessoas em busca de produtos personalizados (canecas, botons).
+*   💼 **Profissionais:** Impressão de planilhas e documentos.
+*   **Persona de Teste:** Claudio Lucas de Farias (Dono da loja).
 
-Quando/onde usam :- ex. "sempre que
-surge a necessidade de um produto novo, geralmente de casa ou da
-escola, antes de ir a loja retirar".
+---
 
-Pessoa real para testar o app: Claudio Lucas de Farias (dono da loja,
-tio de um dos membros do grupo).
+## 🖼️ Protótipo e Interface
 
+O design foi focado na clareza e facilidade de uso para quem está na correria do dia a dia.
 
-4. SOLUCAO EM UMA TELA
-------------------------
+| Pedidos | Novo Pedido | Estoque | Novo Material |
+| :---: | :---: | :---: | :---: |
+| ![Tela de pedidos](docs/telas/01-pedidos.png) | ![Tela de novo pedido](docs/telas/02-novo-pedido.png) | ![Tela de estoque](docs/telas/03-estoque.png) | ![Tela de novo material](docs/telas/04-novo-material.png) |
 
-- A tela principal lista: os pedidos ja feitos (produto, cliente,
-  status)
-- A acao principal do usuario e: criar um novo pedido, escolhendo o
-  tipo de produto e o cliente
-- Depois de agir, o usuario ve: o novo pedido aparecendo na lista, com
-  status "Em aberto"
+🔗 **[Visualizar Protótipo Interativo no Figma](https://www.figma.com/design/aGKY9fQi4fqQMsaLlFerOS/Aquarela?node-id=0-1&t=5QbIWXBvJo3ShDJx-1)**
 
+---
 
-5. FUNCIONALIDADES DO MVP
-----------------------------
+## 🚀 Funcionalidades (MVP)
 
-F1 - Cadastrar/listar produtos (caneca, botom, impressao)
-     Essencial: Sim | Responsavel: a definir
+- [x] **F1 [Essencial]** - Cadastrar/listar produtos (caneca, botom, impressão)
+- [x] **F2 [Essencial]** - Criar pedido vinculado a um cliente e um produto
+- [x] **F3 [Essencial]** - Listar pedidos com status (Em aberto / Pronto / Entregue)
+- [ ] **F4 [Desejável]** - Buscar/filtrar pedidos por cliente ou status
 
-F2 - Criar pedido vinculado a um cliente e um produto
-     Essencial: Sim | Responsavel: a definir
+**Fora do Escopo:** Pagamentos in-app, Notificações Push, Chat, Sincronização em Nuvem.
 
-F3 - Listar pedidos com status (em aberto / pronto / entregue)
-     Essencial: Sim | Responsavel: a definir
+---
 
-F4 - Buscar/filtrar pedidos por cliente ou status
-     Essencial: Nao | Responsavel: a definir
+## 🛠️ Stack Técnico
 
+O app utiliza a **Opção A (Room)**, salvando todos os dados localmente no dispositivo.
 
-6. FORA DO ESCOPO
---------------------
+*   **UI:** Jetpack Compose + Material 3
+*   **Dados:** [Room Database](https://developer.android.com/training/data-storage/room) + KSP
+*   **Assincronismo:** Kotlin Coroutines + Flow
+*   **Navegação:** Navigation Compose
 
-- Login/cadastro de usuario com senha
-- Pagamento dentro do app
-- Notificacoes push
-- Chat com a loja
-- Sincronizacao em nuvem / multiplos dispositivos
+---
 
+## 👥 Equipe e Responsabilidades
 
-7. CAMINHO TECNICO
----------------------
-Opcao escolhida: A - Room (dados salvos no proprio celular).
+| Integrante | Papel Principal |
+| :--- | :--- |
+| **David** | Dev / Telas e UI |
+| **Eduardo** | Dev / Camada de Dados (Room) |
+| **Iraquitan** | Design e Identidade Visual |
+| **Arthur** | Documentação, Build e Entrega |
 
-Entidades previstas (a implementar por cada integrante):
-- Produto (nome, tipo, preco)
-- Cliente (nome, contato)
-- Pedido (produto, cliente, status, data)
+> **Risco Identificado:** Acesso limitado a computadores em casa. 
+> **Plano B:** Uso planejado dos laboratórios da instituição.
 
-Bibliotecas do grupo:
-- Jetpack Compose + Material 3
-- Navigation Compose
-- Room + KSP
-- Kotlin Coroutines + Flow
+---
 
-Obs.: as dependencias do Retrofit ja estao configuradas no boilerplate
-por padrao do template da turma, mas nao serao usadas neste MVP, ja
-que o caminho escolhido foi Room.
+## 🤖 Acordo de Trabalho com IA
 
-Onde entra o try/catch:
-- Lista de pedidos vazia ao abrir o app
-  -> usuario ve: mensagem "Nenhum pedido ainda" em vez de tela em branco
-- Campo obrigatorio em branco ao criar pedido/cliente/produto
-  -> usuario ve: mensagem indicando o campo que falta preencher
-- Erro inesperado ao salvar no banco
-  -> usuario ve: mensagem generica de erro, sem o app fechar
+1.  **Revisão Obrigatória:** Ninguém aceita mudanças do Agent Mode sem ler a mudança inteira.
+2.  **Documentação:** Quem aceitou o código escreve o comentário de fronteira do arquivo.
+3.  **Sincronização:** Antes de cada marco, o grupo revisa junto o que foi feito.
+4.  **Segurança:** Nenhuma chave de API ou senha vai para o prompt.
 
+---
 
-8. IDENTIDADE VISUAL
------------------------
-- Nome exibido (strings.xml): Aquarela Papelaria
-- Cor principal (hex): #6650A4 (placeholder - trocar pela cor definida
-  pelo grupo)
-- Ideia do icone (512x512): a definir
-- applicationId: br.edu.ifpe.aquarelapapelaria
-- Versao inicial: 1.0 (versionCode 1)
+## 📅 Cronograma de Marcos (Milestones)
 
+| Marco | Descrição | Prazo | Status |
+| :---: | :--- | :---: | :---: |
+| M1 | Canvas + Repositório | 16/09 | ✅ |
+| M2 | PRD + Protótipo | 30/09 | ✅ |
+| M3 | Funcionalidade Base (Lista + Ação) | 21/10 | ⏳ |
+| M4 | Persistência Room Completa | 11/11 | 📅 |
+| M5 | Identidade Visual + APK Release | 25/11 | 📅 |
+| M6 | Entrega Final e Materiais de Loja | 02/12 | 📅 |
 
-9. EQUIPE, PAPEIS E RISCOS
-------------------------------
+---
 
-- Dev / telas: David
-- Dev / dados (Room): Eduardo 
-- Design e identidade visual: Iraquitan 
-- Documentacao, build e entrega: Arthur 
+## ✅ Definição de Pronto (DoD)
 
-Lembrete do canvas: todos programam - o papel define quem responde por
-aquela parte, nao quem trabalha sozinho nela.
+- [ ] Estabilidade: 5 min de uso sem crashes.
+- [ ] Dados Reais: Sem textos "mockados" na interface final.
+- [ ] UX: Mensagens de erro claras para o usuário (o app não quebra).
+- [ ] Branding: Ícone e cores próprias configuradas.
+- [ ] Documentação: `AGENTS.md` e `USO_DE_IA.md` preenchidos.
 
-Riscos:
-- Risco: alguns membros do grupo não possuem computador em casa| Plano B: arrumar alguns dias pra alugar algum laboratório e fazer.
+---
 
+## 📋 Informações Acadêmicas
+*   **Integrantes:** Eduardo, Arthur, Iraquitan e David
+*   **Turma:** 3º ano A - Ensino Médio
+*   **Entrega Final:** 10/12/2026
+*   **Repositório:** [GitHub - Projeto Aquarela](https://github.com/Edu1910sccp/Projeto-H-lio-)
 
-10. ACORDO DE TRABALHO COM IA
----------------------------------
-Regras combinadas pelo grupo (do canvas, para o AGENTS.md):
-1. Ninguem clica "Accept" no Agent Mode sem ler a mudanca inteira.
-2. Quem aceitou o codigo escreve o comentario de fronteira do arquivo.
-3. Antes de cada marco, o grupo revisa junto: alguem nao entendeu
-   alguma parte?
-4. Nenhuma chave de API ou senha vai para o prompt.
-
-Outro combinado do grupo [DEFINIR EM GRUPO]: a preencher.
-
-Como garantir que todos entendem tudo [DEFINIR EM GRUPO]: a preencher
-- ex. quem implementa apresenta o arquivo aos demais, revezar partes,
-revisar PR do colega.
-
-
-11. MARCOS ATE 10/12
-------------------------
-M1 - Canvas preenchido + repositorio criado
-     Prazo: 16/09 | Comprovacao: CANVAS.md no main
-
-M2 - PRD aprovado + telas rascunhadas
-     Prazo: 30/09 | Comprovacao: PRD.md + imagens em docs/
-
-M3 - Funcionalidade base rodando
-     Prazo: 21/10 | Comprovacao: tela principal lista dados + 1 acao + try/catch
-
-M4 - Dados completos (Room) e erros tratados
-     Prazo: 11/11 | Comprovacao: commits da camada de dados
-
-M5 - Identidade visual + .apk de release testado
-     Prazo: 25/11 | Comprovacao: icone, cores, .apk testado por 2 pessoas de fora
-
-M6 - .aab + material de loja + README.md
-     Prazo: 02/12 | Comprovacao: pasta loja/ + README.md completo
-
-Entrega e apresentacao
-     Prazo: 10/12 | Comprovacao: tag v1.0 no repositorio
-
-
-12. DEFINICAO DE PRONTO
----------------------------
-O grupo so considera o app pronto quando todas estas frases forem
-verdadeiras:
-
-[ ] O app abre e nao fecha sozinho depois de 5 minutos de uso.
-[ ] A tela principal mostra dados reais (nao texto de exemplo fixo no codigo).
-[ ] A acao principal funciona e o resultado aparece na tela.
-[ ] Quando algo falha, aparece uma mensagem clara - o app nao quebra.
-[ ] O app tem nome, icone e cor proprios (nada de icone padrao do Android).
-[ ] Duas pessoas de fora do grupo instalaram o .apk e conseguiram usar sem explicacao.
-[ ] O README.md explica o que o app faz, com o que foi feito e como gerar o build.
-[ ] O docs/USO_DE_IA.md e o AGENTS.md estao preenchidos.
-[ ] Cada integrante consegue abrir o projeto e fazer uma mudanca pequena sozinho.
-[ ] Todo arquivo tem o comentario de fronteira escrito pelo grupo.
-
-
-
-## Protótipo Figma
-
-O protótipo apresenta as telas e a navegação
-do aplicativo Aquarela Papelaria.
-
-[Visualizar protótipo no Figma](https://www.figma.com/design/aGKY9fQi4fqQMsaLlFerOS/Aquarela?node-id=0-1&t=5QbIWXBvJo3ShDJx-1)
-
-### Telas do protótipo
-
-#### Pedidos
-![Tela de pedidos](docs/telas/01-pedidos.png)
-
-#### Novo Pedido
-![Tela de novo pedido](docs/telas/02-novo-pedido.png)
-
-#### Estoque
-![Tela de estoque](docs/telas/03-estoque.png)
-
-#### Novo Material
-![Tela de novo material](docs/telas/04-novo-material.png)
+---
+<p align="center"><i>Projeto desenvolvido para a disciplina de Desenvolvimento Móvel.</i></p>
