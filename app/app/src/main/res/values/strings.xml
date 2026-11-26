@@ -55,4 +55,12 @@
     <string name="pedidos_prazo_linha">Prazo: %1$s</string>
     <string name="pedidos_status_linha">Status: %1$s</string>
 
+    <!-- Fronteira: mensagens da tela de clientes. -->
+    <string name="clientes_titulo">Clientes</string>
+    <string name="clientes_carregando">Carregando clientes...</string>
+    <string name="clientes_vazio">Nenhum cliente cadastrado.</string>
+    <string name="clientes_erro">Erro ao carregar clientes.</string>
+    <string name="clientes_nome">Nome: %1$s</string>
+    <string name="clientes_telefone">Telefone: %1$s</string>
+
 </resources>
