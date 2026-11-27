@@ -6,4 +6,5 @@ package br.edu.ifpe.aquarelapapelaria.ui.navigation
 sealed class NavTarget(val rota: String) {
     data object Pedidos : NavTarget("pedidos")
     data object Clientes : NavTarget("clientes")
+    data object Produtos : NavTarget("produtos")
 }
