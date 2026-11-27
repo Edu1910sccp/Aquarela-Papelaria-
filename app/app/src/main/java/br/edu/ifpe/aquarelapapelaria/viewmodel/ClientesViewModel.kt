@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import br.edu.ifpe.aquarelapapelaria.R
 import br.edu.ifpe.aquarelapapelaria.data.local.AppDatabase
+import br.edu.ifpe.aquarelapapelaria.data.repository.ClienteRepository
 import br.edu.ifpe.aquarelapapelaria.ui.features.clientes.ClienteUiState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
@@ -15,7 +16,7 @@ import kotlinx.coroutines.launch
 
 class ClientesViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val banco = AppDatabase.obterBanco(application)
+    private val repository: ClienteRepository
 
     private val _uiState = MutableStateFlow<ClienteUiState>(ClienteUiState.Carregando)
     val uiState: StateFlow<ClienteUiState> = _uiState.asStateFlow()
@@ -23,6 +24,8 @@ class ClientesViewModel(application: Application) : AndroidViewModel(application
     private var leituraJob: Job? = null
 
     init {
+        val dao = AppDatabase.obterBanco(application).clienteDao()
+        repository = ClienteRepository(dao)
         carregar()
     }
 
@@ -31,7 +34,7 @@ class ClientesViewModel(application: Application) : AndroidViewModel(application
         leituraJob = viewModelScope.launch {
             _uiState.value = ClienteUiState.Carregando
             try {
-                banco.clienteDao().listarTodos().collect { lista ->
+                repository.listarTodos().collect { lista ->
                     _uiState.value = if (lista.isEmpty()) {
                         ClienteUiState.Vazio
                     } else {

@@ -1,7 +1,7 @@
 package br.edu.ifpe.aquarelapapelaria.ui
 
 import androidx.annotation.StringRes
-import br.edu.ifpe.aquarelapapelaria.model.Pedido
+import br.edu.ifpe.aquarelapapelaria.model.PedidoComCliente
 
 // Fronteira: representa os quatro estados da tela.
 // Separa os resultados da consulta da apresentação.
@@ -17,6 +17,6 @@ sealed interface UiState {
     ) : UiState
 
     data class Sucesso(
-        val itens: List<Pedido>
+        val itens: List<PedidoComCliente>
     ) : UiState
 }

@@ -8,6 +8,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import br.edu.ifpe.aquarelapapelaria.R
 import br.edu.ifpe.aquarelapapelaria.data.local.AppDatabase
+import br.edu.ifpe.aquarelapapelaria.data.repository.ProdutoRepository
 import br.edu.ifpe.aquarelapapelaria.model.Produto
 import br.edu.ifpe.aquarelapapelaria.ui.features.produtos.UiState
 import kotlinx.coroutines.CancellationException
@@ -19,7 +20,7 @@ import kotlinx.coroutines.launch
 
 class ProdutosViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val banco = AppDatabase.obterBanco(application)
+    private val repository: ProdutoRepository
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Carregando)
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
@@ -30,6 +31,8 @@ class ProdutosViewModel(application: Application) : AndroidViewModel(application
     private var leituraJob: Job? = null
 
     init {
+        val dao = AppDatabase.obterBanco(application).produtoDao()
+        repository = ProdutoRepository(dao)
         carregar()
     }
 
@@ -38,7 +41,7 @@ class ProdutosViewModel(application: Application) : AndroidViewModel(application
         leituraJob = viewModelScope.launch {
             _uiState.value = UiState.Carregando
             try {
-                banco.produtoDao().listarTodos().collect { lista ->
+                repository.listarTodos().collect { lista ->
                     _uiState.value = if (lista.isEmpty()) {
                         UiState.Vazio
                     } else {
@@ -69,7 +72,7 @@ class ProdutosViewModel(application: Application) : AndroidViewModel(application
                     quantidade = qtd,
                     observacoes = obs.trim()
                 )
-                banco.produtoDao().inserir(produto)
+                repository.inserir(produto)
                 mensagem = getApplication<Application>().getString(R.string.produtos_sucesso)
             } catch (e: Exception) {
                 mensagem = getApplication<Application>().getString(R.string.produtos_falha)

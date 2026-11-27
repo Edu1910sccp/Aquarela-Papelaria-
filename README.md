@@ -93,8 +93,8 @@ O app utiliza a **Opção A (Room)**, salvando todos os dados localmente no disp
 | :---: | :--- | :---: | :---: |
 | M1 | Canvas + Repositório | 16/09 | ✅ |
 | M2 | PRD + Protótipo | 30/09 | ✅ |
-| M3 | Funcionalidade Base (Lista + Ação) | 21/10 | ⏳ |
-| M4 | Persistência Room Completa | 11/11 | 📅 |
+| M3 | Funcionalidade Base (Lista + Ação) | 21/10 | ✅ |
+| M4 | Persistência Room Completa | 11/11 | ✅ |
 | M5 | Identidade Visual + APK Release | 25/11 | 📅 |
 | M6 | Entrega Final e Materiais de Loja | 02/12 | 📅 |
 

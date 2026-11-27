@@ -8,6 +8,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import br.edu.ifpe.aquarelapapelaria.model.Pedido
+import br.edu.ifpe.aquarelapapelaria.model.PedidoComCliente
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -25,6 +26,14 @@ interface PedidoDao {
     // RF01: fila ordenada do prazo mais próximo ao mais distante
     @Query("SELECT * FROM pedidos ORDER BY prazo ASC")
     fun listarPorPrazo(): Flow<List<Pedido>>
+
+    @androidx.room.Transaction
+    @Query("SELECT * FROM pedidos ORDER BY prazo ASC")
+    fun listarPedidosComCliente(): Flow<List<PedidoComCliente>>
+
+    @androidx.room.Transaction
+    @Query("SELECT * FROM pedidos WHERE id = :id")
+    suspend fun buscarPedidoComClientePorId(id: Long): PedidoComCliente?
 
     @Query("SELECT * FROM pedidos WHERE id = :id")
     suspend fun buscarPorId(id: Long): Pedido?
