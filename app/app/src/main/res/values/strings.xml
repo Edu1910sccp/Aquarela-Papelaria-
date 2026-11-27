@@ -78,4 +78,9 @@
     <string name="produtos_marca_label">Marca: %1$s</string>
     <string name="produtos_quantidade_label">Qtd: %1$d</string>
 
+    <!-- Navegação -->
+    <string name="nav_pedidos">Pedidos</string>
+    <string name="nav_clientes">Clientes</string>
+    <string name="nav_estoque">Estoque</string>
+
 </resources>
