@@ -7,9 +7,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import br.edu.ifpe.aquarelapapelaria.model.Cliente
 import br.edu.ifpe.aquarelapapelaria.model.Pedido
+import br.edu.ifpe.aquarelapapelaria.model.Produto
 
 @Database(
-    entities = [Cliente::class, Pedido::class],
+    entities = [Cliente::class, Pedido::class, Produto::class],
     version = 1,
     exportSchema = false
 )
@@ -17,6 +18,7 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun clienteDao(): ClienteDao
     abstract fun pedidoDao(): PedidoDao
+    abstract fun produtoDao(): ProdutoDao
 
     companion object {
         @Volatile

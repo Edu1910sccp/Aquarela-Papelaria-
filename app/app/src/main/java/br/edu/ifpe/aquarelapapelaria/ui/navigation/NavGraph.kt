@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.edu.ifpe.aquarelapapelaria.ui.features.clientes.ClientesScreen
 import br.edu.ifpe.aquarelapapelaria.ui.features.pedidos.PedidosScreen
+import br.edu.ifpe.aquarelapapelaria.ui.features.produtos.ProdutosScreen
 
 @Composable
 fun AppNavGraph() {
@@ -20,6 +21,9 @@ fun AppNavGraph() {
         }
         composable(NavTarget.Clientes.rota) {
             ClientesScreen()
+        }
+        composable(NavTarget.Produtos.rota) {
+            ProdutosScreen()
         }
     }
 }

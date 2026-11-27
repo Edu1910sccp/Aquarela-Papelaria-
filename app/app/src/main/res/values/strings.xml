@@ -63,4 +63,19 @@
     <string name="clientes_nome">Nome: %1$s</string>
     <string name="clientes_telefone">Telefone: %1$s</string>
 
+    <!-- Fronteira: mensagens da tela de produtos (Estoque). -->
+    <string name="produtos_titulo">Estoque</string>
+    <string name="produtos_carregando">Carregando estoque...</string>
+    <string name="produtos_vazio">Estoque vazio.</string>
+    <string name="produtos_erro">Erro ao carregar estoque.</string>
+    <string name="produtos_cadastrar">Adicionar ao Estoque</string>
+    <string name="produtos_nome">Nome</string>
+    <string name="produtos_marca">Marca</string>
+    <string name="produtos_quantidade">Quantidade</string>
+    <string name="produtos_obs">Observações</string>
+    <string name="produtos_sucesso">Produto adicionado!</string>
+    <string name="produtos_falha">Erro ao adicionar produto.</string>
+    <string name="produtos_marca_label">Marca: %1$s</string>
+    <string name="produtos_quantidade_label">Qtd: %1$d</string>
+
 </resources>
